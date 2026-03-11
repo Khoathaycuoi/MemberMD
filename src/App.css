@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: auto;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.stat-boxes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+.stat-box p {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.box-active {
+  background-color: #28a745;
+}
+.box-inactive {
+  background-color: #dc3545;
+}
+.box-total {
+  background-color: #007bff;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-controls button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-controls button.active-filter {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-boxes {
+    flex-direction: column;
+  }
+}
+
+.member-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border: 3px solid transparent;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-active {
+  border-color: #28a745;
+}
+.card-inactive {
+  border-color: #dc3545;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+.badge-active {
+  background-color: #28a745;
+}
+.badge-inactive {
+  background-color: #dc3545;
+}
+
+.position {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.points-box {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+}
+
+.points-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.award-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.award-btn:hover {
+  background-color: #0056b3;
+}
