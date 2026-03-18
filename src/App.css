@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: sans-serif;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .dashboard-container {
@@ -76,6 +76,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  align-items: stretch;
 }
 
 @media (max-width: 900px) {
@@ -101,6 +102,7 @@ h1 {
     transform 0.2s ease,
     box-shadow 0.2s ease;
   border: 3px solid transparent;
+  min-width: 300px;
 }
 
 .member-card:hover {
@@ -173,6 +175,8 @@ h1 {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
+
+  margin-top: auto;
 }
 
 .award-btn:hover {
